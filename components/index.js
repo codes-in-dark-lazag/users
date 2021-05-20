@@ -5,22 +5,10 @@ import {Dialog, DialogContent, DialogContentText,Box
           } from '@material-ui/core';
 import { CloseRounded } from "@material-ui/icons";
 
-
-const useStyles = makeStyles({
-root: {
-  width: '100%',
-},
-rowStyle:{
-  marginTop:"20px",
-},
-
-});
-
 const UsersPage = ({users, doRefresh}) =>{
     
     const [open, setOpen] = useState(false)
     const [curr, setCurrent] = useState({link:"", title:""})
-    const classes = useStyles();
     const displayModal = (link, title)=>{
       setOpen(true);
       setCurrent({link:link, title:title})
@@ -30,7 +18,7 @@ const UsersPage = ({users, doRefresh}) =>{
         window.onscroll = function () {
             doRefresh();
         }
-    }, [])
+    }, [users])
     return (
       <>
         <div className="container">
