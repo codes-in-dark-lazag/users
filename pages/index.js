@@ -19,7 +19,7 @@ export default function Home({data}) {
   )
 }
 export async function getServerSideProps() {
-  const res = await fetch("https://api.stackexchange.com/2.2/search/advanced?page=1&pagesize=20&o rder=desc&sort=activity&site=stackoverflow")
+  const res = await fetch("https://api.stackexchange.com/2.2/search/advanced?page=10&pagesize=20&order=desc&sort=activity&site=stackoverflow")
   const data = await res.json()
   return { props: { data } }
 }
