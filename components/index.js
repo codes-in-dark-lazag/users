@@ -20,11 +20,7 @@ const UsersPage = ({users, doRefresh}) =>{
       setOpen(true);
       setCurrent({link:link, title:title})
     }
-
-    useEffect(()=>{
-        doRefresh();
-    }, [users])
-        
+    
     return (
       <>
         <div className="container">
