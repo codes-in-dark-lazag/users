@@ -22,9 +22,7 @@ const UsersPage = ({users, doRefresh}) =>{
     }
 
     useEffect(()=>{
-        window.onscroll = function () {
-            doRefresh();
-        }
+        doRefresh();
     }, [users])
         
     return (
