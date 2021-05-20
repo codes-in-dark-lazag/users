@@ -1,0 +1,63 @@
+.container{
+    margin-top: 50px;
+    margin-left: 12%;
+    align-items: center;
+    overflow: hidden;
+}
+
+.container tr{
+    height: 40px;
+    padding-top: 10px;
+}
+
+/* --------------ROW DISPLAY -------------- */
+.stylingRow{
+    background-color: white;
+    border-width: 2px;
+    border: 1px solid silver;
+    width: auto;
+    height: 50px;
+    margin-top: 15px;
+    border-radius: 5px;
+    font-size: 0.7em;
+}
+
+.stylingRow td{
+    padding-top: 10px;
+}
+
+.stylingRow:hover{
+    -webkit-transform: translateY(5px);
+    -webkit-transform: translateX(3px);
+    box-shadow:0 .5rem 0.6rem rgba(37, 46, 49, 0.15)!important;
+    border: none;
+ 
+}
+
+
+/* ---------------------DIALOG DISPLAY ---------------------- */
+.dialog-title{
+    font-size: 20px;
+}
+
+.dialog-close-icon{
+    height: 3px;
+    width: 3px;
+    background: none;
+}
+
+.dialog-close-icon-container{
+    background-color: none;
+    height: 20px;
+    width: 10px;
+    margin-left: 100%;
+}
+
+.dialog-close-icon:hover{
+    background-color: rgba(147, 62, 76, 0.15);
+    border-radius: 20px;
+}
+
+.dialog-content{
+    font-size: 15px;
+}
