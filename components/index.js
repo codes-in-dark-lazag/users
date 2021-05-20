@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { makeStyles } from '@material-ui/core/styles';
 import {Dialog, DialogContent, DialogContentText,Box
         , Table, TableBody, DialogTitle,Divider, IconButton
@@ -16,7 +16,7 @@ rowStyle:{
 
 });
 
-const UsersPage = ({users}) =>{
+const UsersPage = ({users, doRefresh}) =>{
     
     const [open, setOpen] = useState(false)
     const [curr, setCurrent] = useState({link:"", title:""})
@@ -25,6 +25,12 @@ const UsersPage = ({users}) =>{
       setOpen(true);
       setCurrent({link:link, title:title})
     }
+
+    useEffect(()=>{
+        window.onscroll = function () {
+            doRefresh();
+        }
+    }, [])
     return (
       <>
         <div className="container">
