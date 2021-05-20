@@ -59,10 +59,7 @@ const UsersPage = ({users}) =>{
           </div> 
           
         </DialogTitle>
-              
-          
-          <Divider />
-          <DialogContent>
+        <DialogContent>
             <DialogContentText>
               <a className="dialog-content" href={curr.link}>{curr.link}</a>
             </DialogContentText>
